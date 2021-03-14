@@ -1,0 +1,68 @@
+main{
+	text-align: center;
+}
+#form{
+	margin-top: 10px;
+	position: relative;
+}
+#results{
+	padding: 0 100px;
+	margin-top: 35px;
+}
+#results aside{
+	position: fixed;
+	float: left;
+	text-align: left;
+	width: 28%;
+}
+#results aside > *{
+	margin: 10px 0;
+}
+#results section{
+	float: right;
+	text-align: left;
+	width: 70%;
+}
+#results aside span:not("#clear"){
+	font-size: 1em;
+}
+#results aside form input{
+	box-sizing: border-box;
+	padding-right: 40px;
+	width: 96%;
+}
+#results aside form input, #results aside form button{
+	display: block;
+	margin: 10px 0;
+}
+#results > span{
+	font-size: 1.5em;
+	display: block;
+}
+#results aside, #results section{
+	margin-top: 15px;
+}
+#result-list{
+	padding: 0 100px;
+}
+#clear{
+	position: absolute;
+	font-size: 1.3em;
+    color: black;
+    right: 35px;
+    top: 55px;
+    cursor: pointer;
+}
+.push > *{
+	display: block;
+	margin: 7px 0;
+}
+.push a:hover{
+	color: #354B5E;
+}
+.push + .push{
+	border-top: 1px solid black;
+}
+.hide{
+	display: none !important;
+}

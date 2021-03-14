@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='template.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}" />
+    <link rel="stylesheet" href="/stylesheets/signup.css" />
+	<title>Sign Up</title>
+</head>
+<body>
+	<nav id="nav">
+		<a href="/">Home</a>
+	    <a href="/rot13">Rot 13</a>
+	    <a href="/sign_up" class="selected">Sign Up</a>
+	    <a href="/AsciiArt">Ascii Art</a>
+		<a href="/pokeball">Pokeball</a>
+		<a href="/searchbullet">Search Bullet</a>
+        <a href="/updatepushes">Update Pushes</a>
+        <a href='/randomeats'>Random Eats</a>
+	</nav>
+	<div id='form'>
+		<form method="post">
+            <div class="title">Sign Up</div>
+            <label>
+                <span class="label-input">
+                    Username:
+                    <input type="text" name="username" value={{username}}>
+                </span>
+                <span class="error">{{username_err}}</span>
+            </label>
+            <label>
+                <span class="label-input">
+                    Password:
+                    <input type="password" name="password" value="">
+                </span>
+                <span class="error">{{password_err}}</span>
+            </label>
+            <label>
+                <span class="label-input">
+                    Retype Password:
+                    <input type="password" name="verify" value="">
+                </span>
+                <span class="error">{{verify_err}}</span>
+            </label>
+            <label>
+                <span class="label-input">
+                    Email (Optional):
+                    <input type="text" name="email" value={{email}}>
+                </span>
+                <span class="error">{{email_err}}</span>
+            </label>
+            <button type="submit">Submit</button>
+		</form>
+	</div>
+</body>
+</html>

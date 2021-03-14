@@ -1,0 +1,36 @@
+body{
+    font-size: 25px;
+}
+#form{
+    text-align: center;
+	
+}
+#form form{
+	display: inline-block;
+	text-align: center;
+}
+#form label{
+    display: block;
+	width: 100%;
+	margin: 25px 0;
+	text-align: right;
+}
+#form span input{
+    padding: 5px;
+}
+#form button{
+    margin: 10px auto 0 auto;
+}
+.title{
+    margin: 10px 0 15px 0;
+
+}
+.label-input{
+    display: inline-block;
+    text-align: right;   
+}
+.error{
+	display: block;
+	text-align: right;
+	color: red;
+}

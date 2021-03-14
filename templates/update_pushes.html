@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='material.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='update_pushes.css') }}" />
+    <title>Update Pushes</title>
+</head>
+<body>
+	<!-- Uses a header that scrolls with the text, rather than staying
+	locked at the top -->
+	<div class="mdl-layout--no-desktop-drawer-button mdl-js-layout">
+		<header class="mdl-layout__header mdl-layout__header--scroll">
+			<div class="mdl-layout__header-row">
+				<!-- Title -->
+				<h3 class="mdl-layout-title">Update Pushes</h3>
+				<!-- Add spacer, to align navigation to the right -->
+				<div class="mdl-layout-spacer"></div>
+				<!-- Navigation -->
+				<nav class="mdl-navigation">
+					<a class="mdl-navigation__link" href="/">Home</a>
+					<a class="mdl-navigation__link" href="/rot13">Rot 13</a>
+					<a class="mdl-navigation__link" href="/sign_up">Sign Up</a>
+					<a class="mdl-navigation__link" href="/AsciiArt">Ascii Art</a>
+					<a class="mdl-navigation__link" href="/pokeball">Pokeball</a>
+					<a class="mdl-navigation__link" href="/searchbullet">Search Bullet</a>
+					<a class="mdl-navigation__link is-active" href="/updatepushes" class="selected">Update Pushes</a>
+				</nav>
+			</div>
+		</header>
+		<div class="mdl-layout__drawer">
+			<span class="mdl-layout__title">Simple Layout</span>
+			<nav class="mdl-navigation">
+				<a class="mdl-navigation__link" href="#">Nav link 2</a>
+				<a class="mdl-navigation__link" href="#">Nav link 2</a>
+				<a class="mdl-navigation__link" href="#">Nav link 3</a>
+			</nav>
+		</div>
+		<main class="mdl-layout__content">
+			<div class="page-content">
+				<div class="mdl-grid" id="pushes-list">
+					{{pushes}}
+					<nav class="mdl-cell mdl-cell--12-col">
+						<a class="mdl-navigation__link previous" {{previouspage)}}>
+							<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect previous-pushes" {{disableprevious}}>
+								<i class="material-icons">navigate_before</i><span class="icon-text"> Previous</span>
+							</button>
+						</a>
+						<div class="section-spacer"></div>
+						<a class="mdl-navigation__link next" {{nextpage}}>
+							<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect next-pushes" {{disablenext}}>
+								<span class="icon-text">Next </span><i class="material-icons">navigate_next</i>
+							</button>
+						</a>
+					</nav>
+				</div>
+				<div id="toast" class="mdl-js-snackbar mdl-snackbar">
+					<div class="mdl-snackbar__text"></div>
+					<button class="mdl-snackbar__action" type="button"></button>
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+<script src="/js/material.min.js"></script>
+<script src="/js/update_pushes.js"></script>
+</html>

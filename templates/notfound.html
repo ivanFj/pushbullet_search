@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='template.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='notfound.css') }}" />
+	<link rel="stylesheet" href="/stylesheets/notfound.css" />
+    <title>Hub Menu</title>
+</head>
+<body>
+	<nav id="nav">
+        <a href="/">Home</a>
+	    <a href="/Unit2">Rot 13</a>
+	    <a href="/Unit21">Sign Up</a>
+	    <a href="/AsciiArt">Ascii Art</a>
+		<a href="/pokeball">Pokeball</a>
+		<a href="/searchbullet">Search Bullet</a>
+    </nav>
+    <div id="error">The page you requested does not exist</div>
+</body>
+</html>

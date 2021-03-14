@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='template.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='welcome.css') }}" />
+	<title>Welcome!</title>
+</head>
+<body>
+	<div class="message">
+		Welcome, <span class="username">{{username}}</span>!
+	</div>
+</body>
+</html>

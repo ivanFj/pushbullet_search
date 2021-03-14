@@ -1,0 +1,102 @@
+body{
+	overflow-x: hidden;
+}
+main{
+	padding: 20px 0px;
+}
+.loading, .fade-div{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	background-color: rgba(225, 225, 225, .7);
+	height: 100%;
+	width: 100%;
+	display: flex;
+}
+.loading .mdl-spinner{
+	margin: auto auto auto 10px;
+}
+.page-content .mdl-grid > nav {
+	display: flex;
+	justify-content: space-between;
+}
+.icon-text{
+	vertical-align: middle;
+}
+.pushes{
+	padding: 10px 15px;
+	position: relative;
+	max-height: 230px;
+	min-height: 80px;
+	overflow: hidden;
+	transition: max-height .5s ease-in, min-height .5s ease-out;
+}
+.transition-grow{
+	max-height: 550px;
+}
+.fade-in{
+	opacity: 0 !important;
+	display: flex !important;
+}
+.fade-out{
+	opacity: 1 !important;
+	display: flex !important;
+}
+.pushes .url{
+	text-decoration: none;
+}
+.pushes .url:hover{
+	color: rgb(244,67,54);
+}
+.pushes textarea{
+	max-height: 200px;
+}
+.delete-push{
+	transform: translateX(1242px);
+	transition: all .5s linear;
+}
+.mdl-navigation__link{
+	font-weight: 700;
+}
+.mdl-navigation__link:hover{
+	color: rgba(225, 225, 225, .8);
+}
+.is-active{
+	color: rgba(225, 225, 225, .8) !important;
+}
+.title, .body, .url{
+	padding: 10px 0;
+}
+.pushes .mdl-card__actions, #update-form .mdl-card__actions{
+	padding-left: 0;
+}
+.hide{
+	display: none !important;
+}
+.loading-text{
+	display: inline-block;
+	margin: auto 0 auto auto;
+	vertical-align: middle;
+}
+.delete-text:before, .update-text:before{
+	content: "Deleting";
+	color: rgb(244,67,54);
+	font-size: 18px;
+}
+.fade-div{
+	transition: opacity .5s linear;
+	z-index: -1;
+	opacity: 1;
+	background-color: white;
+}
+.update-text:before{
+	content: "Updating";
+}
+.url{
+	word-break: break-all;
+}
+#update-form > div{
+	width: 500px;
+	display: block;
+}

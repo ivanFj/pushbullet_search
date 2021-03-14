@@ -1,0 +1,25 @@
+body{
+    font-size: 25px;
+}
+#form{
+    margin: 0 auto;
+    width: 406px;
+}
+#form textarea{
+    width: 400px;
+    height: 400px;
+    resize: none;
+	font-family: inherit;
+	font-size: .8em;
+	box-sizing: content-box;
+	overflow-y: scroll;
+}
+#form button{
+    width: 100%;
+}
+.title{
+    font-size: 2em;
+    margin-top: 10px;
+    color: #354B5E;
+    text-align: center;
+}

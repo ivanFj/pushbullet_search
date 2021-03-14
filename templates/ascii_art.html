@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <style type="text/css">
+        input, textarea, button {
+            display: block;
+        }
+        body {
+            margin: 0 auto;
+            font-family: Impact, Arial, sans-serif;
+        }
+        input, textarea {
+            width: 500px
+        }
+		nav{
+			padding-left: 30px;
+		}
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/favicon.ico">
+    <title>Ascii Art</title>
+</head>
+<body>
+<span><a href='index.html'>Hub Menu</a></span>
+<form method="post">
+    <label>Title
+        <input type="text" value="{{title}}" name="title" />
+    </label>
+    <label>Ascii Art</label>
+    <textarea name="art">{{art}}</textarea>
+    <button type="submit" >Submit</button>
+</form>
+{% if art in arts%}
+    <hr />
+    <div class="art">{{art}}</div>
+</body>
+</html>

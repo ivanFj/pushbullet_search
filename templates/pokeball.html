@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='template.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='pokeball.css') }}" />
+	<title>Pokeball</title>
+</head>
+<body>
+	<nav id="nav">
+		<a href="/">Home</a>
+	    <a href="/rot13">Rot 13</a>
+	    <a href="/sign_up">Sign Up</a>
+	    <a href="/AsciiArt">Ascii Art</a>
+		<a href="/pokeball" class = "selected">Pokeball</a>
+		<a href="/searchbullet">Search Bullet</a>
+        <a href="/updatepushes">Update Pushes</a>
+        <a href='/randomeats'>Random Eats</a>
+	</nav>
+	<div class="poke-wrapper">
+		<div class="pokeball">
+			<div class="red-top"></div>
+			<div class="black-belt">
+				<div class="black-circle">
+					<div class="white-circle">
+						<div class="button"></div>
+					</div>
+				</div>
+			</div>
+			<div class="white-bottom"></div>
+		</div>
+	</div>
+	<div id="shadow"></div>
+</body>
+</html>

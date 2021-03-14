@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="600px" height="600px" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <filter id="blurFilter" x="-5" y="-5" height="11" width="11">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+        </filter>
+    </defs>
+    <circle cx="100" cy="100" r="99.3" stroke="black" />
+    <path d="M 5 100, A 55 55 0 1 1 195 100" fill="red" />
+    <path d="M 5 100, A 55 55 0 1 0 195 100" fill="white" />
+    <rect x="4" y="88" width="194" height="25" fill="black" />
+    <circle cx="100" cy="100" r="30" fill="black" />
+    <circle cx="100" cy="100" r="22" fill="white" />
+    <circle cx="100" cy="100" r="16" fill="black" filter="url(#blurFilter)" />
+    <circle cx="100" cy="100" r="15" fill="white" />
+</svg>

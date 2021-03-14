@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='template.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='rot13.css') }}" />
+    <title>Rot 13</title>
+</head>
+<body>
+	<nav id="nav">
+		<a href="/">Home</a>
+	    <a href="/rot13" class="selected">Rot 13</a>
+	    <a href="/sign_up">Sign Up</a>
+	    <a href="/AsciiArt">Ascii Art</a>
+		<a href="/pokeball">Pokeball</a>
+		<a href="/searchbullet">Search Bullet</a>
+		<a href="/updatepushes">Update Pushes</a>
+	</nav>
+    <div id="form">
+        <div class="title">Rot 13</div>
+        <form method="post">
+            <textarea name="text" placeholder ="Enter some text to encode it" >{{text}}</textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+::placeholder{
+
+    color: #000;
+    opacity: .5;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #D0C6B1; 
+    font-size: 25px;
+    color: #D74B4B;
+    font-family: "Open Sans", sans-serif;
+}
+form button{
+    border: none;
+    background-color: #D74B4B;
+    color: #E1E1D6;
+    font-size: .8em;
+    padding: 10px;
+}
+form input[type="text"], form input[type="password"]{
+	padding: 6px;
+}
+#nav{
+    background-color: #D74B4B; 
+    padding: 25px;
+    margin-bottom: 25px;
+}
+#nav a{
+    text-decoration: none;
+    font-size: 0.9em;
+    color: #E1E1D6;
+    position: relative;
+}
+#nav a + a{
+    margin-left: 1%;   
+}
+#nav a:hover{
+    color: #192823;   
+}
+#form button:hover{
+    cursor: pointer;
+    color: #192823;
+}
+.selected{
+    border-bottom: 2px solid #192823;
+}
+.title{
+    font-size: 2em;
+    margin-top: 10px;
+    color: #354B5E;
+    text-align: center;
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='template.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='searchbullet.css') }}" />
+    <title>Search Bullet</title>
+</head>
+<body>
+	<nav id="nav">
+        <a href="/">Home</a>
+	    <a href="/rot13">Rot 13</a>
+	    <a href="/sign_up">Sign Up</a>
+	    <a href="/AsciiArt">Ascii Art</a>
+		<a href="/pokeball">Pokeball</a>
+		<a href="/searchbullet" class = "selected">Search Bullet</a>
+        <a href="/updatepushes">Update Pushes</a>
+        <a href='/randomeats'>Random Eats</a>
+    </nav>
+	<main>
+		<div class="title">Search Bullet</div>
+		<div id="form">
+			<form method="post">
+				<label>
+					Access Token <input type="text" name="token" placeholder="pushbullet access token">
+				</label>
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+		<div id="results" class={{hide}}>
+			<span>Results</span>
+			<aside>
+				<form onsubmit="return search(this.firstElementChild.lastElementChild.value);">
+					<label>
+						<span>Search through your pushes</span> <input type="text">
+					</label>
+					<span id='clear' onclick="clearSearch();" class="hide">&#x2715;</span>
+					<button type="submit">Search</button>
+				</form>
+			</aside>
+			<section id="result-list">{{pushes|safe}}</section>
+		</div>
+	</main>
+	<script>
+			var pushes;
+			
+			function search(searchWord){
+				event.preventDefault();
+				event.returnValue = false;
+				
+				var tempResults = document.createElement("div");
+				pushes = document.getElementById("result-list").cloneNode(true);
+				
+				for (var i = 0; i < pushes.childElementCount; i++){
+					if (pushes.children[i].textContent.toLowerCase().includes(searchWord.toLowerCase()))
+						tempResults.appendChild(pushes.children[i].cloneNode(true))
+				}
+				
+				if (tempResults.childElementCount === 0){
+					document.getElementById("result-list").textContent = "No pushes found";
+				}else{
+					document.getElementById("result-list").innerHTML = tempResults.innerHTML;
+				}
+				document.getElementById("clear").className = ""
+				return false;
+			}
+			function clearSearch(){
+				document.getElementById("clear").className = "hide";
+				event.target.parentNode.children[0].children[1].value = "";
+				document.getElementById("result-list").innerHTML = pushes.innerHTML;
+			}
+	</script>
+</body>
+</html>

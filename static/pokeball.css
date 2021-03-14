@@ -1,0 +1,154 @@
+body:hover > *:not(#shadow):not(#nav){
+	-webkit-animation-duration:5s;
+	-webkit-animation-name: shake;
+	-webkit-animation-iteration-count: infinite;
+}
+body:hover .button{
+	-webkit-animation-duration:5s;
+	-webkit-animation-name: blink;
+	-webkit-animation-iteration-count: infinite;
+}
+body:hover #shadow{
+	-webkit-animation-duration:5s;
+	-webkit-animation-name: shadow;
+	-webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes shake{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	25%{
+		margin-left: 25%;
+		-webkit-transform: rotate(-30deg);
+	}
+	75%{ 
+		margin-left: 35%;
+		-webkit-transform: rotate(30deg); 
+	}
+	100%{
+		margin-left: 30.86%;
+		-webkit-transform: rotate(0deg);
+	}
+}
+@-webkit-keyframes blink{
+	0%{
+		background-color: white;
+	}
+	8%{
+		background-color: white;
+	}
+	15%{
+		background-color: red;
+	}
+	22%{
+		background-color: white;
+	}
+	37%{
+		background-color: white;
+	}
+	44%{
+		background-color: red;
+	}
+	51%{
+		background-color: white;
+	}
+	75%{
+		background-color: white;
+	}
+	82%{
+		background-color: red;
+	}
+	89%{
+		background-color: white;
+	}
+	100%{
+		background-color: white;
+	}
+}
+@-webkit-keyframes shadow{
+	0%{
+		margin-left: 30.86%;
+	}
+	25%{
+		margin-left: 25%;
+	}
+	75%{
+		margin-left: 35%;
+	}
+	100%{
+		margin-left: 30.86%;
+	}
+}
+.poke-wrapper{
+	background-color: black;
+	width: 520px;
+	height: 520px;
+	margin-left: 30.86%;
+    margin-top: 1%;
+	border-radius: 50%;
+}
+.pokeball{
+	width: 500px;
+	height: 500px;
+	display: inline-block;
+	margin: 10px;
+	-webkit-border-radius: 250px;
+	-moz-border-radius: 250px;
+	border-radis: 250px;
+	overflow: hidden;
+	background-color: black;
+	position: relative;
+}
+.red-top{
+	height: 45%;
+	background-color: red;
+}
+.black-belt{
+	position: absolute;
+	top: 45%;
+	left: 0;
+	height: 10%;
+	width: 100%;
+	background-color: transparent;	
+}
+.black-circle{
+	position: absolute;
+	top: -100%;
+	left: 35%;
+	height: 300%;
+	width: 30%;
+	border-radius: 75%;
+	background-color: black;
+}
+.white-circle{
+	position: absolute;
+	height: 70%;
+	width: 70%;
+	border-radius: 50%;
+	top: 15%;
+	left: 15%;
+	background-color: white
+}
+.button{
+	position: absolute;
+	width: 70%;
+	height: 70%;
+	top: 15%;
+	left: 15%;
+	border-radius: 50%;
+	background-color: white;
+	box-shadow: 0 0 10px black;
+}
+.white-bottom{
+	height: 45%;
+	margin-top: 10%;
+	background-color: white;
+}
+#shadow{
+	border-radius: 50%;
+	height: 30px;
+	width: 520px;
+	margin: 90px auto 0 auto;
+	z-index: -1;
+	box-shadow: 0 -100px 62px 15px black;
+}
